@@ -197,12 +197,12 @@ var Manipulatr = (function () {
                 
                 // Determine whether this setting is namespaced or root setting
                 if (typeof inner_setting === 'undefined') {
-                    settings[outer_setting] = attribute.value;
+                    settings[outer_setting] = setting_value;
                 } else {
                     if (!(outer_setting in settings)) {
                         settings[outer_setting] = {};
                     }
-                    settings[outer_setting][inner_setting] = attribute.value;
+                    settings[outer_setting][inner_setting] = setting_value;
                 }
             }
         });
