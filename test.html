@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tests for manipulatr</title>
+  </head>
+  
+  <body>
+    <h1>Tests for manipulatr</h1>
+    
+    <h2>Rotation</h2>
+    
+    <h3>Left</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="rotate"
+      data-manipulatr-rotate-mode="left"
+      >
+    <h3>Right</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="rotate"
+      data-manipulatr-rotate-mode="right"
+      >
+    <h3>Half</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="rotate"
+      data-manipulatr-rotate-mode="half"
+      >
+    
+    <h2>Scaling</h2>
+    <h3>Percentage (50%)</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="scale"
+      data-manipulatr-scale-percentage="50"
+      >
+    <h3>Specified width and height (100 x 100)</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="scale"
+      data-manipulatr-scale-width="100"
+      data-manipulatr-scale-height="100"
+      >
+    
+    <h2>Flipping</h2>
+    <h3>Vertically</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="flip"
+      data-manipulatr-flip-direction="vertical"
+      >
+    <h3>Horizontally</h3>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="flip"
+      data-manipulatr-flip-direction="horizontal"
+      >
+    
+    <h2>Grayscale</h2>
+    <img
+      src="assets/img/flower.jpg"
+      alt="Flower"
+      data-manipulatr-name="grayscale"
+      >
+    
+    <h2>Output</h2>
+    <h3>Force PNG</h3>
+    <img
+      src="assets/img/qrcode.png"
+      alt="QR code"
+      data-manipulatr-name="scale"
+      data-manipulatr-scale-percentage="75"
+      data-manipulatr-format="png"
+      >
+    
+    <h3>Force GIF</h3>
+    <img
+      src="assets/img/qrcode.png"
+      alt="QR code"
+      data-manipulatr-name="scale"
+      data-manipulatr-scale-percentage="75"
+      data-manipulatr-format="gif"
+      >
+      
+    <h3>Force JPEG</h3>
+    <img
+      src="assets/img/qrcode.png"
+      alt="QR code"
+      data-manipulatr-name="scale"
+      data-manipulatr-scale-percentage="75"
+      data-manipulatr-format="jpeg"
+      >
+    
+    <script src="manipulatr.js"></script>
+  </body>
+</html>
