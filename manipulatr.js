@@ -112,6 +112,13 @@ var Manipulatr = (function () {
             context.drawImage(image, 0, 0, width, height);
         },
         
+        crop: function (image, canvas, context, settings) {
+            canvas.width = settings.width;
+            canvas.height = settings.height;
+            context.translate(-1 * settings.left, -1 * settings.top);
+            context.drawImage(image, 0, 0, image.width, image.height);
+        },
+        
         grayscale: function (image, canvas, context, settings) {
             var width = image.width;
             var height = image.height;
