@@ -16,6 +16,27 @@ var Manipulatr = (function () {
         return string.substr(0, sub_string.length) === sub_string;
     };
     
+    var guess_image_mime_type = function (image_src) {
+        var image_extension;
+        try {
+            image_extension = image_src.split('.').pop(-1);
+        } catch (error) {}
+        
+        var image_mime_type;
+        switch (image_extension.toLowerCase()) {
+            case 'gif':
+                image_mime_type = 'image/gif';
+                break;
+            case 'png':
+                image_mime_type = 'image/png';
+                break;
+            default:
+                image_mime_type = 'image/jpeg';
+                break;
+        }
+        return image_mime_type;
+    };
+    
     // Check for canvas support creating a dummy module if not
     var is_canvas_available = function () {
         var canvas = document.createElement('canvas');
@@ -214,27 +235,6 @@ var Manipulatr = (function () {
             }
         });
         return settings;
-    };
-    
-    var guess_image_mime_type = function (image_src) {
-        var image_extension;
-        try {
-            image_extension = image_src.split('.').pop(-1);
-        } catch (error) {}
-        
-        var image_mime_type;
-        switch (image_extension.toLowerCase()) {
-            case 'gif':
-                image_mime_type = 'image/gif';
-                break;
-            case 'png':
-                image_mime_type = 'image/png';
-                break;
-            default:
-                image_mime_type = 'image/jpeg';
-                break;
-        }
-        return image_mime_type;
     };
     
     window.addEventListener('DOMContentLoaded', function () {
